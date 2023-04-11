@@ -128,6 +128,7 @@ def get_code(location):
 # 登录
 def login(user, password):
     url1 = "https://api-user.huami.com/registrations/" + user + "/tokens"
+    print("---------登录：",url1)
     headers = {
         "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
         "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2"
@@ -144,7 +145,7 @@ def login(user, password):
         code = get_code(location)
     except:
         return 0, 0
-    # print("access_code获取成功！")
+     print("access_code获取成功！")
     # print(code)
 
     url2 = "https://account.huami.com/v2/client/login"
