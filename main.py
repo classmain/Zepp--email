@@ -145,7 +145,7 @@ def login(user, password):
         code = get_code(location)
     except:
         return 0, 0
-     print("access_code获取成功！")
+    print("access_code获取成功！",password)
     # print(code)
 
     url2 = "https://account.huami.com/v2/client/login"
@@ -169,7 +169,7 @@ def login(user, password):
     # print("login_token获取成功！")
     # print(login_token)
     userid = r2["token_info"]["user_id"]
-    # print("userid获取成功！")
+    print("userid获取成功！")
     # print(userid)
 
     return login_token, userid
